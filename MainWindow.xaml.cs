@@ -22,7 +22,7 @@ namespace WpfApp4
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
     }
 }
