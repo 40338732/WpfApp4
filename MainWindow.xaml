@@ -5,9 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="800">
     <Grid>
-        <Button Content="Check Link" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.003,-0.293"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <DockPanel Grid.Column="0" Margin="5 5" Background="AliceBlue">
+            <StackPanel>
+                <Button Content="{Binding AddOrderButtonContent}" Command="{Binding AddOrderButtonCommand}" Margin="2 2 2 10"/>
+                <Button Content="{Binding ViewOrderButtonContent}" Command="{Binding ViewOrderButtonCommand}" Margin="2 2 2 10"/>
+            </StackPanel>
+        </DockPanel>
+
+        <ContentControl Content="{Binding ContentControlBinding}" Grid.Column="1" Margin="0,5,5,5"/>
     </Grid>
 </Window>

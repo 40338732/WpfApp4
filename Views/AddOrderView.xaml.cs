@@ -12,23 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-// Add for project
 using WpfApp4.ViewModels;
 
-
-namespace WpfApp4
+namespace WpfApp4.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddOrderView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddOrderView : UserControl
     {
-        public MainWindow()
+        public AddOrderView()
         {
             InitializeComponent();
-
-            this.DataContext = new MainWIndowViewModel();
+            this.DataContext = new AddOrderViewModel(); 
         }
     }
 }

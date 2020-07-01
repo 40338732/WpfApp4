@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-// Add for project
-using WpfApp4.ViewModels;
-
-
-namespace WpfApp4
+namespace WpfApp4.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ViewOrderView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ViewOrderView : UserControl
     {
-        public MainWindow()
+        public ViewOrderView()
         {
             InitializeComponent();
-
-            this.DataContext = new MainWIndowViewModel();
         }
     }
 }
