@@ -62,6 +62,7 @@
     <Compile Include="ViewModels\AddOrderViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWIndowViewModel.cs" />
+    <Compile Include="ViewModels\ViewOrderViewModel.cs" />
     <Compile Include="Views\AddOrderView.xaml.cs">
       <DependentUpon>AddOrderView.xaml</DependentUpon>
     </Compile>

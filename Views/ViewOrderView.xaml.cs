@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp4.ViewModels;
 
 namespace WpfApp4.Views
 {
@@ -23,6 +24,7 @@ namespace WpfApp4.Views
         public ViewOrderView()
         {
             InitializeComponent();
+            DataContext = new ViewOrderViewModel();
         }
     }
 }
