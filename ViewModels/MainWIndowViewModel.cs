@@ -43,7 +43,9 @@ namespace WpfApp4.ViewModels
 
         private void ViewOrderButtonClick()
         {
+            ContentControlBinding = new ViewOrderView();
 
+            OnChanged(nameof(ContentControlBinding));
         }
         #endregion
     }
