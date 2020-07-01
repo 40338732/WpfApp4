@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Database\LoadFromFile.cs" />
     <Compile Include="Database\SaveToFile.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="ViewModels\AddOrderViewModel.cs" />

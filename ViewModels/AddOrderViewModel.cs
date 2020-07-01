@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using WpfApp4.Commands;
+using WpfApp4.Database;
+using WpfApp4.Models;
 
 namespace WpfApp4.ViewModels
 {
@@ -50,7 +53,31 @@ namespace WpfApp4.ViewModels
 
         private void AddButtonClick()
         {
+            if (string.IsNullOrWhiteSpace(ItemNameTextBox) || string.IsNullOrWhiteSpace(ItemPriceTextBox))
+            {
+                MessageBox.Show("Please enter all values");
+                return;
+            }
 
+            Order order = new Order()
+            {
+                Name = ItemNameTextBox,
+                Price = Convert.ToDecimal(ItemPriceTextBox),
+                IsPaid = IsPaid
+            };
+
+            SaveToFile save = new SaveToFile();
+
+            if(!save.ToCsv(order))
+            {
+                MessageBox.Show("Error while saving\n" + save.ErrorCode);
+
+            }
+            else
+            {
+                MessageBox.Show("Order Saved");
+                save = null;
+            }
         }
 
     }
